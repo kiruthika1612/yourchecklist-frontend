@@ -1,0 +1,24 @@
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+      onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SHOP</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">CONTACT <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Cal Us</a>
+        <a href="#" class="w3-bar-item w3-button">Mail Us</a>
+        <a href="#" class="w3-bar-item w3-button">Feedback</a>
+      </div>
+    </div>
+    <div class="w3-right w3-padding">
+        <!-- <p>Want to become our PRIME MEMBER? Register with us</p> -->
+      <button class="w3-button w3-blue" [routerLink]="['/signup']">Sign Up</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <button class="w3-button w3-green" [routerLink]="['/login']">Login</button>
+     
+    </div>
+  </div>
+</div>
