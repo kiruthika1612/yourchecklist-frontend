@@ -17,7 +17,12 @@ export class CustomerService {
     );
 
   }
+  auth(data): Observable<any> {
+    return this.http.post<any>('http://localhost:3000/authenticateCustomer', data).pipe(
+      catchError(this.handleError)
+    );
 
+  }
 
 
   private handleError(err: HttpErrorResponse) {
