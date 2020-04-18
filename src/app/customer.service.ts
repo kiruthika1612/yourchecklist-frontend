@@ -10,7 +10,8 @@ export class CustomerService {
 
   userLoginInfo: any = {
     userLogin: false,
-    cid: null
+    cid: null,
+    cName:null
   }
   userLogin: boolean = false;
 
@@ -31,6 +32,7 @@ export class CustomerService {
 
           this.userLoginInfo.userLogin = next.status;
           this.userLoginInfo.cid = next.customerId;
+          this.userLoginInfo.cName = next.customerName;
         }
       ),
       catchError(this.handleError)
@@ -42,6 +44,20 @@ export class CustomerService {
     return this.http.post<any>('https://jb2lrfry56.execute-api.ap-south-1.amazonaws.com/kiru-prod/send-email', data).pipe(
       catchError(this.handleError)
     );
+  }
+
+  buyProduct(data): Observable<any> {
+    return this.http.post<any>('http://localhost:3000/buy', data).pipe(
+      catchError(this.handleError)
+    );
+
+  }
+
+  fetchMyProducts(data): Observable<any> {
+    return this.http.post<any>('http://localhost:3000/getmyproducts', data).pipe(
+      catchError(this.handleError)
+    );
+
   }
 
 

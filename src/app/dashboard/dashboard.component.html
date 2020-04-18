@@ -1,3 +1,26 @@
-<p>
-  dashboard works!
-</p>
+<div class="w3-container w3-light-grey w3-padding w3-center w3-border">
+  <div class="w3-center">
+    <h2>MY PRODUCTS</h2>
+  </div>
+  <div *ngIf='myProducts?.length != 0' class="w3-row">
+    <div class="w3-col" style="width:500px;" *ngFor='let product of myProducts'>
+      <div class="w3-container">
+        <img src="{{product.productImageUrl}}" alt="myProducts" style="max-width:100%">
+        <div class="w3-container w3-center">
+          <p>{{product.productName}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf='myProducts == undefined || myProducts?.length == 0'>
+    <h3 style="opacity: 0.4"> <i>You are yet to make your first purchase</i> </h3>
+  </div>
+</div>
+<br>
+<div class="w3-container w3-light-grey w3-padding w3-center w3-border">
+
+  <div class="w3-center">
+    <h2>AVAILABLE PRODUCTS</h2>
+  </div>
+  <app-products></app-products>
+</div>

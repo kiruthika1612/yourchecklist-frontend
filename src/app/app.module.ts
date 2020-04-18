@@ -35,6 +35,9 @@ import { CosmeticsComponent } from './products/cosmetics/cosmetics.component';
 import { CosmeticOneComponent } from './products/cosmetics/cosmetic-one/cosmetic-one.component';
 import { CosmeticTwoComponent } from './products/cosmetics/cosmetic-two/cosmetic-two.component';
 import { CosmeticThreeComponent } from './products/cosmetics/cosmetic-three/cosmetic-three.component';
+import { PaymentComponent } from './payment/payment.component';
+import { PurchaseSuccessComponent } from './purchase-success/purchase-success.component';
+import { PurchaseFailComponent } from './purchase-fail/purchase-fail.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,10 @@ import { CosmeticThreeComponent } from './products/cosmetics/cosmetic-three/cosm
     CosmeticsComponent,
     CosmeticOneComponent,
     CosmeticTwoComponent,
-    CosmeticThreeComponent
+    CosmeticThreeComponent,
+    PaymentComponent,
+    PurchaseSuccessComponent,
+    PurchaseFailComponent
   ],
   imports: [
     BrowserModule,

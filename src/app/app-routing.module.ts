@@ -25,6 +25,9 @@ import { CosmeticsComponent } from './products/cosmetics/cosmetics.component';
 import { CosmeticOneComponent } from './products/cosmetics/cosmetic-one/cosmetic-one.component';
 import { CosmeticTwoComponent } from './products/cosmetics/cosmetic-two/cosmetic-two.component';
 import { CosmeticThreeComponent } from './products/cosmetics/cosmetic-three/cosmetic-three.component';
+import { PaymentComponent } from './payment/payment.component';
+import { PurchaseSuccessComponent } from './purchase-success/purchase-success.component';
+import { PurchaseFailComponent } from './purchase-fail/purchase-fail.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -53,11 +56,17 @@ const routes: Routes = [
   { path: 'cosmeticthree', component: CosmeticThreeComponent },
 
 
+  { path: 'payment/:pid', component: PaymentComponent },
+  { path: 'purchase-success', component: PurchaseSuccessComponent },
+  { path: 'purchase-fail', component: PurchaseFailComponent },
+
+
   { path: 'address', component: AddressComponent },
   { path: 'termsandconditions', component: TermsandconditionsComponent },
   { path: 'privatepolicy', component: PrivatepolicyComponent },
   { path: 'returns', component: ReturnsComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }
 
 ];
 

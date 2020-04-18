@@ -2,7 +2,7 @@
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
       onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a [routerLink]="['/home']" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SHOP</a>
     <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
     <div class="w3-dropdown-hover w3-hide-small">
@@ -13,6 +13,10 @@
         <a href="#" class="w3-bar-item w3-button">Feedback</a>
       </div>
     </div>
+
+    <button *ngIf='customerSvc.userLoginInfo.userLogin' class=" w3-padding" class="w3-button"
+      (click)='takeMeToDashboard()'>DASHBOARD</button>
+
     <div *ngIf='!customerSvc.userLoginInfo.userLogin' class="w3-right w3-padding">
       <button class="w3-button w3-blue" [routerLink]="['/signup']">Sign Up</button>
       &nbsp;&nbsp;&nbsp;&nbsp;
@@ -20,7 +24,7 @@
     </div>
 
     <div *ngIf='customerSvc.userLoginInfo.userLogin' class="w3-right w3-padding">
-        <button class="w3-button w3-red" (click)='toggleLoginState()' [routerLink]="['/home']">Logout</button>
-      </div>
+      <button class="w3-button w3-red" (click)='toggleLoginState()' [routerLink]="['/home']">Logout</button>
+    </div>
   </div>
 </div>

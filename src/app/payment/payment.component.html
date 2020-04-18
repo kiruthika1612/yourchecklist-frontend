@@ -1,0 +1,190 @@
+<h2 style="color:black;"> Checkout Page </h2>
+<p style="color:black;">&nbsp;
+  Please enter the details </p>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="continuetocheckout.html">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Anitha">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="anitha@gmail.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address </label>
+            <input type="text" id="adr" name="address" placeholder="757vTarbutt Street Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="Canada">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="Anitha">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <div *ngIf='this.customerservice.userLoginInfo.userLogin'>
+          <input type="submit" (click)='buy()' value="Continue to checkout" class="btn">
+        </div>
+        <div *ngIf='!this.customerservice.userLoginInfo.userLogin'>
+          <input type="submit" onclick="document.getElementById('loginModal').style.display='block'"
+            value="Please Login to Check Out" class="btn">
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="col-25">
+    <div class="container">
+      <h4>Cash on Delivery <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> </span></h4>
+      <br />
+      <br />
+      <div class='w3-center'>
+        <div *ngIf='!this.customerservice.userLoginInfo.userLogin'>
+          <button class="w3-button w3-orange" onclick="document.getElementById('loginModal').style.display='block'">GO
+            FOR COD</button>
+        </div>
+        <div *ngIf='this.customerservice.userLoginInfo.userLogin'>
+          <button class="w3-button w3-orange" (click)='buy()'>GO FOR COD</button>
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <!-- Adding popup -->
+      <h2>Cash On Delivery!!!</h2>
+      <p>Wanna pay only after seeing the product? Check out our exclusive payment option</p>
+
+      <!-- Button to Open the Modal -->
+      <button class="w3-button w3-blue w3-margin-bottom"
+        onclick="document.getElementById('ticketModal').style.display='block'">What is COD??</button>
+
+    </div>
+  </div>
+</div>
+<!-- COD Popup-->
+<div id="ticketModal" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-4">
+    <header class="w3-container w3-teal w3-center w3-padding">
+      <span onclick="document.getElementById('ticketModal').style.display='none'"
+        class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+      <h2 class="w3-wide"><i class="fa fa-money w3-margin-right"></i>Cash On Delivery</h2>
+    </header>
+    <div class="w3-container">
+      <div class="w3-main">
+        <h3>
+          Cash on Delivery is a payment method where you dont need to pay anything before you actually see the
+          products!!! You can pay the amount after wee deliver the product to you!!! 
+        </h3>
+      </div>
+      <button class="w3-button w3-red w3-section"
+        onclick="document.getElementById('ticketModal').style.display='none'">Cancel <i
+          class="fa fa-remove"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- Login Modal-->
+<div id="loginModal" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-4">
+    <header class="w3-container w3-grey w3-center w3-padding">
+      <span onclick="document.getElementById('loginModal').style.display='none'"
+        class="w3-button w3-grey w3-xlarge w3-display-topright">×</span>
+      <h2 class="w3-wide"><i class="fa fa-money w3-margin-right"></i>Login</h2>
+    </header>
+    <div class="w3-container w3-padding-16">
+      <div class="w3-main w3-padding">
+        <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)" style="border:1px solid #ccc">
+
+
+
+          <div class="center w3-padding w3-center">
+            <label> <b>Email</b></label>
+            <input formControlName="email" type="text" placeholder="Enter your email address" required>
+
+            <label><b>Password</b></label>
+            <input formControlName="password" type="password" placeholder="Password" required>
+
+            <div *ngIf='!showBuy'>
+              <button class="w3-button w3-red w3-section"
+                onclick="document.getElementById('loginModal').style.display='none'">Cancel</button> &nbsp;&nbsp;&nbsp;
+              <button type="submit" class="w3-button w3-green" [disabled]="!formdata.valid"> LogIn</button>
+            </div>
+            <div *ngIf='showBuy'>
+              <button type="submit" class="w3-button w3-green"
+                onclick="document.getElementById('loginModal').style.display='none'" (click)='buy()'> BUY</button>
+            </div>
+
+          </div>
+          <div *ngIf='loginState' class="w3-container">
+            <div class="w3-center">
+              <h1 class="w3-red"> Email id or password is incorrect!</h1>
+            </div>
+
+          </div>
+
+
+        </form>
+      </div>
+      <!-- <button class="w3-button w3-red w3-section"
+        onclick="document.getElementById('loginModal').style.display='none'">Cancel <i
+          class="fa fa-remove"></i></button> -->
+    </div>
+  </div>
+</div>
+<script>
+  // When the user clicks anywhere outside of the modal, close it
+  var modal = document.getElementById('ticketModal');
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  var modal = document.getElementById('loginModal');
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
