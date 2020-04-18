@@ -27,6 +27,10 @@ import { BagsComponent } from './products/bags/bags.component';
 import { BagOneComponent } from './products/bags/bag-one/bag-one.component';
 import { BagTwoComponent } from './products/bags/bag-two/bag-two.component';
 import { BagThreeComponent } from './products/bags/bag-three/bag-three.component';
+import { AccessoriesComponent } from './products/accessories/accessories.component';
+import { AccessoryOneComponent } from './products/accessories/accessory-one/accessory-one.component';
+import { AccessoryTwoComponent } from './products/accessories/accessory-two/accessory-two.component';
+import { AccessoryThreeComponent } from './products/accessories/accessory-three/accessory-three.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import { BagThreeComponent } from './products/bags/bag-three/bag-three.component
     BagsComponent,
     BagOneComponent,
     BagTwoComponent,
-    BagThreeComponent
+    BagThreeComponent,
+    AccessoriesComponent,
+    AccessoryOneComponent,
+    AccessoryTwoComponent,
+    AccessoryThreeComponent
   ],
   imports: [
     BrowserModule,

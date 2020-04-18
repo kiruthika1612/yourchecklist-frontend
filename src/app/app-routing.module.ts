@@ -17,6 +17,10 @@ import { BagsComponent } from './products/bags/bags.component';
 import { BagOneComponent } from './products/bags/bag-one/bag-one.component';
 import { BagTwoComponent } from './products/bags/bag-two/bag-two.component';
 import { BagThreeComponent } from './products/bags/bag-three/bag-three.component';
+import { AccessoriesComponent } from './products/accessories/accessories.component';
+import { AccessoryOneComponent } from './products/accessories/accessory-one/accessory-one.component';
+import { AccessoryTwoComponent } from './products/accessories/accessory-two/accessory-two.component';
+import { AccessoryThreeComponent } from './products/accessories/accessory-three/accessory-three.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -33,6 +37,11 @@ const routes: Routes = [
   { path: 'bagone', component: BagOneComponent },
   { path: 'bagtwo', component: BagTwoComponent },
   { path: 'bagthree', component: BagThreeComponent },
+
+  { path: 'accessories', component: AccessoriesComponent },
+  { path: 'accessoryone', component: AccessoryOneComponent },
+  { path: 'accessorytwo', component: AccessoryTwoComponent },
+  { path: 'accessorythree', component: AccessoryThreeComponent },
 
   { path: 'address', component: AddressComponent },
   { path: 'termsandconditions', component: TermsandconditionsComponent },
