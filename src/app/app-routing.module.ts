@@ -13,8 +13,8 @@ import { ReturnsComponent } from './returns/returns.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  // { path: 'dashboard/:name', canActivate: [AuthenticationGuard], component: DashboardComponent },
-  { path: 'dashboard/:name', component: DashboardComponent },
+  { path: 'dashboard/:name', canActivate: [AuthenticationGuard], component: DashboardComponent },
+  // { path: 'dashboard/:name', component: DashboardComponent },
 
   { path: 'signup', component: SignupComponent },
   { path: 'address', component: AddressComponent },

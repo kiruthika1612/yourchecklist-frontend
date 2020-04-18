@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerService } from '../customer.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+
+
+
+  constructor(private customerSvc: CustomerService) { }
 
   ngOnInit() {
+
+  }
+
+  toggleLoginState() {
+    this.customerSvc.userLogin = !this.customerSvc.userLogin;
   }
 
 }
