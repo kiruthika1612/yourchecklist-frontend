@@ -8,6 +8,8 @@ import { catchError, tap } from 'rxjs/operators'
 })
 export class CustomerService {
 
+  userLogin: boolean = false;
+
   constructor(private http: HttpClient) { }
 
 
@@ -19,6 +21,12 @@ export class CustomerService {
   }
   auth(data): Observable<any> {
     return this.http.post<any>('http://localhost:3000/authenticateCustomer', data).pipe(
+      tap(
+        next => {
+          console.log(next);
+          this.userLogin = next.status;
+        }
+      ),
       catchError(this.handleError)
     );
 
