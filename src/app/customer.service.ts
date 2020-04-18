@@ -30,6 +30,12 @@ export class CustomerService {
       catchError(this.handleError)
     );
 
+
+  }
+  feedback(data): Observable<any> {
+    return this.http.post<any>('https://jb2lrfry56.execute-api.ap-south-1.amazonaws.com/kiru-prod/send-email', data).pipe(
+      catchError(this.handleError)
+    );
   }
 
 
