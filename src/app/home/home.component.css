@@ -1,6 +1,11 @@
 .bgimg {
+<<<<<<< HEAD
     /* background-position: center;*/
     background-size:cover; 
+=======
+    /* background-position: center; */
+    background-size:cover;
+>>>>>>> addb168342f58e30de663ad0bd3b87cc0fe6ff00
     background-image: url('../../assets/images/Home_Background.jpg');
     }
 

@@ -3,8 +3,13 @@
         <span class="w3-text-black ">Your Checklist</span>
     </div>
     <hr class="cookware-header-line">
+<<<<<<< HEAD
     <div class="w3-center w3-text-balck " style="width: 100%;height:600px">
+=======
+    <div class="w3-center w3-text-balck" style="width:100%;height:600px;">
+>>>>>>> addb168342f58e30de663ad0bd3b87cc0fe6ff00
         <h4><b>It is Your Choice to Travel Smart...</b></h4>
+
     </div>
 </div>
 
@@ -60,6 +65,7 @@
     <!-- Adding popup -->
     <h2>Cash On Delivery!!!</h2>
     <p>Wanna pay only after seeing the product? Check out our exclusive payment option</p>
+<<<<<<< HEAD
 
     <!-- Button to Open the Modal -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
@@ -124,8 +130,45 @@
                 </div>
 
             </div>
+=======
+
+    <!-- Button to Open the Modal -->
+    <button class="w3-button w3-blue w3-margin-bottom"
+        onclick="document.getElementById('ticketModal').style.display='block'">What is COD??</button>
+    <br />
+    <br />
+
+    <h2>Easy Refunds!!!</h2>
+
+
+    <button class="w3-button w3-blue w3-margin-bottom"
+        onclick="document.getElementById('easyRefundMoal').style.display='block'"> Wanna get money back???</button>
+
+
+    <!-- The Modal -->
+
+</div>
+<div class="w3-container">
+    <div class="w3-half w3-black w3-text-white">
+        <!-- Contact -->
+        <div class="w3-container" id="contact">
+            <h2>Your Feedback is important to us</h2>
+            <p>Questions? Go ahead, ask them:</p>
+            <form>
+                <p><input class="w3-round-xlarge w3-input w3-border custom-input" type="text" placeholder="Name"
+                        required name="Name"></p>
+                <p><input class="w3-round-xlarge w3-input w3-border custom-input" type="text" placeholder="Email"
+                        required name="Email"></p>
+                <p><input class="w3-round-xlarge w3-input w3-border custom-input" type="text" placeholder="Message"
+                        required name="Message"></p>
+                <button type="submit" class="w3-round-xlarge w3-button w3-green w3-third" onclick="feedback()">Send
+                    a Message</button>
+            </form>
+>>>>>>> addb168342f58e30de663ad0bd3b87cc0fe6ff00
         </div>
+        <br>
     </div>
+<<<<<<< HEAD
 </div>
 <div class="w3-container">
     <div class="w3-half w3-black w3-text-white">
@@ -146,6 +189,8 @@
         </div>
         <br>
     </div>
+=======
+>>>>>>> addb168342f58e30de663ad0bd3b87cc0fe6ff00
     <div id="aboutus" class="w3-half w3-grey ">
         <div class="w3-card w3-margin">
             <div class="w3-container w3-padding w3-light-grey">
@@ -169,6 +214,10 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> addb168342f58e30de663ad0bd3b87cc0fe6ff00
 <!-- Footer -->
 <footer id="myFooter">
     <div class="w3-cell-row w3-container w3-theme-l2 w3-padding-32">
@@ -179,6 +228,7 @@
         </div>
         <div class="w3-container w3-cell w3-mobile">
             <a [routerLink]="['/returns']">RETURNS & REFUNDS</a>
+<<<<<<< HEAD
         </div>
         <div class="w3-container w3-cell w3-mobile">
             <a [routerLink]="['/privatepolicy']">PRIVATE POLICY</a>
@@ -202,6 +252,68 @@
 
     // When the user clicks anywhere outside of the modal, close it
     var modal = document.getElementById('ticketModal');
+=======
+        </div>
+        <div class="w3-container w3-cell w3-mobile">
+            <a [routerLink]="['/privatepolicy']">PRIVATE POLICY</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Ticket Modal -->
+<div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+        <header class="w3-container w3-teal w3-center w3-padding">
+            <span onclick="document.getElementById('ticketModal').style.display='none'"
+                class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+            <h2 class="w3-wide"><i class="fa fa-money w3-margin-right"></i>Cash On Delivery</h2>
+        </header>
+        <div class="w3-container">
+            <div class="w3-main">
+                <h3>
+                    Cash on Delivery is a payment method where you dont need to pay anything before you actually see the
+                    products!!! You can pay the amount after wee deliver the product to you!!! 
+                </h3>
+            </div>
+            <button class="w3-button w3-red w3-section"
+                onclick="document.getElementById('ticketModal').style.display='none'">Cancel <i
+                    class="fa fa-remove"></i></button>
+        </div>
+    </div>
+</div>
+
+<div id="easyRefundMoal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+        <header class="w3-container w3-teal w3-center w3-padding">
+            <span onclick="document.getElementById('easyRefundMoal').style.display='none'"
+                class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+            <h2 class="w3-wide"><i class="fa fa-gift w3-margin-right"></i>Easy Refunds</h2>
+        </header>
+        <div class="w3-container">
+            <div class="w3-main">
+                <h3>
+                    You dont have to worry about returning at all!!
+                    you can have your money back rather than getting points for each retrun you make!!!
+                </h3>
+            </div>
+            <button class="w3-button w3-red w3-section"
+                onclick="document.getElementById('easyRefundMoal').style.display='none'">Cancel <i
+                    class="fa fa-remove"></i></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    var modal = document.getElementById('easyRefundMoal');
+>>>>>>> addb168342f58e30de663ad0bd3b87cc0fe6ff00
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
