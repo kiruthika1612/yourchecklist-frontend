@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleLoginState() {
-    this.customerSvc.userLogin = !this.customerSvc.userLogin;
+    this.customerSvc.userLoginInfo.userLogin = !this.customerSvc.userLoginInfo.userLogin;
   }
 
 }

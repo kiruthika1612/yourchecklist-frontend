@@ -8,6 +8,10 @@ import { catchError, tap } from 'rxjs/operators'
 })
 export class CustomerService {
 
+  userLoginInfo: any = {
+    userLogin: false,
+    cid: null
+  }
   userLogin: boolean = false;
 
   constructor(private http: HttpClient) { }
@@ -24,7 +28,9 @@ export class CustomerService {
       tap(
         next => {
           console.log(next);
-          this.userLogin = next.status;
+
+          this.userLoginInfo.userLogin = next.status;
+          this.userLoginInfo.cid = next.customerId;
         }
       ),
       catchError(this.handleError)

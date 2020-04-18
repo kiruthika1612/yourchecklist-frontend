@@ -13,13 +13,13 @@
         <a href="#" class="w3-bar-item w3-button">Feedback</a>
       </div>
     </div>
-    <div *ngIf='!customerSvc.userLogin' class="w3-right w3-padding">
+    <div *ngIf='!customerSvc.userLoginInfo.userLogin' class="w3-right w3-padding">
       <button class="w3-button w3-blue" [routerLink]="['/signup']">Sign Up</button>
       &nbsp;&nbsp;&nbsp;&nbsp;
       <button class="w3-button w3-green" [routerLink]="['/login']">Login</button>
     </div>
 
-    <div *ngIf='customerSvc.userLogin' class="w3-right w3-padding">
+    <div *ngIf='customerSvc.userLoginInfo.userLogin' class="w3-right w3-padding">
         <button class="w3-button w3-red" (click)='toggleLoginState()' [routerLink]="['/home']">Logout</button>
       </div>
   </div>

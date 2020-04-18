@@ -15,6 +15,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
 import { PrivatepolicyComponent } from './privatepolicy/privatepolicy.component';
 import { ReturnsComponent } from './returns/returns.component';
+import { ProductsComponent } from './products/products.component';
+import { TrolleysComponent } from './products/trolleys/trolleys.component';
+import { TrolleyOneComponent } from './products/trolleys/trolley-one/trolley-one.component';
+
+import { CarouselModule } from 'primeng/carousel';
+import { ButtonModule } from 'primeng/button';
+import { TrolleyTwoComponent } from './products/trolleys/trolley-two/trolley-two.component';
+import { TrolleyThreeComponent } from './products/trolleys/trolley-three/trolley-three.component';
+import { BagsComponent } from './products/bags/bags.component';
+import { BagOneComponent } from './products/bags/bag-one/bag-one.component';
+import { BagTwoComponent } from './products/bags/bag-two/bag-two.component';
+import { BagThreeComponent } from './products/bags/bag-three/bag-three.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +39,16 @@ import { ReturnsComponent } from './returns/returns.component';
     DashboardComponent,
     TermsandconditionsComponent,
     PrivatepolicyComponent,
-    ReturnsComponent
+    ReturnsComponent,
+    ProductsComponent,
+    TrolleysComponent,
+    TrolleyOneComponent,
+    TrolleyTwoComponent,
+    TrolleyThreeComponent,
+    BagsComponent,
+    BagOneComponent,
+    BagTwoComponent,
+    BagThreeComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +56,10 @@ import { ReturnsComponent } from './returns/returns.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule,
+    ButtonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

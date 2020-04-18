@@ -8,55 +8,9 @@
 
     </div>
 </div>
+<app-products>
 
-<div id="products" class="content w3-padding-large">
-    <div class="w3-col l2">
-        <!-- About Card -->
-        <div class="w3-card w3-margin w3-margin-top">
-            <a>
-                <img src='../../assets/images/Trolleys_Link.jpg' style="width: 100%" height="200" alt="Trolleya"></a>
-            <div class="w3-container w3-white">
-                <h4><b>Travel Trolleys</b></h4>
-
-            </div>
-        </div>
-    </div>
-    <div class="w3-col l2">
-        <!-- About Card -->
-        <div class="w3-card w3-margin w3-margin-top">
-            <a href="travel bag.html">
-
-                <img src="../../assets/images/Bags_Link.jpg" style="width: 100%" height="200" alt="bags"></a>
-            <div class="w3-container w3-white">
-                <h4><b>Travel bags</b></h4>
-
-            </div>
-        </div>
-    </div>
-    <div class="w3-col l2">
-        <!-- About Card -->
-        <div class="w3-card w3-margin w3-margin-top">
-            <a href="travel accessories.html">
-                <img src="../../assets/images/Accessories_Link.jpg" style="width: 100%" height="200"
-                    alt="accessories"></a>
-            <div class="w3-container w3-white">
-                <h4><b>Travel Accessories</b></h4>
-
-            </div>
-        </div>
-    </div>
-    <div class="w3-col l2">
-        <!-- About Card -->
-        <div class="w3-card w3-margin w3-margin-top">
-            <a href="cosmetics.html">
-                <img src="../../assets/images/Cosmetics_Link.jpg" style="width: 100%" height="200" alt="cosmetics"></a>
-            <div class="w3-container w3-white">
-                <h4><b>Travel Cosmetics</b></h4>
-
-            </div>
-        </div>
-    </div>
-</div>
+</app-products>
 <div class="container">
     <!-- Adding popup -->
     <h2>Cash On Delivery!!!</h2>
@@ -85,13 +39,14 @@
             <h2>Your Feedback is important to us</h2>
             <p>Questions? Go ahead, ask them:</p>
             <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
-                <p><input formControlName="name" class="w3-round-xlarge w3-input w3-border custom-input" type="text" placeholder="Name"
-                        required name="Name"></p>
-                <p><input formControlName="femail" class="w3-round-xlarge w3-input w3-border custom-input" type="text" placeholder="Email"
-                        required name="Email"></p>
-                <p><input formControlName="message"class="w3-round-xlarge w3-input w3-border custom-input" type="text" placeholder="Message"
-                        required name="Message"></p>
-                <button type="submit" class="w3-round-xlarge w3-button w3-green w3-third" [disabled]="!formdata.valid">Send
+                <p><input formControlName="name" class="w3-round-xlarge w3-input w3-border custom-input" type="text"
+                        placeholder="Name" required name="Name"></p>
+                <p><input formControlName="femail" class="w3-round-xlarge w3-input w3-border custom-input" type="text"
+                        placeholder="Email" required name="Email"></p>
+                <p><input formControlName="message" class="w3-round-xlarge w3-input w3-border custom-input" type="text"
+                        placeholder="Message" required name="Message"></p>
+                <button type="submit" class="w3-round-xlarge w3-button w3-green w3-third"
+                    [disabled]="!formdata.valid">Send
                     a Message</button>
             </form>
         </div>

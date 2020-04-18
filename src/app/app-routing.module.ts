@@ -9,14 +9,31 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
 import { PrivatepolicyComponent } from './privatepolicy/privatepolicy.component';
 import { ReturnsComponent } from './returns/returns.component';
+import { TrolleysComponent } from './products/trolleys/trolleys.component';
+import { TrolleyOneComponent } from './products/trolleys/trolley-one/trolley-one.component';
+import { TrolleyTwoComponent } from './products/trolleys/trolley-two/trolley-two.component';
+import { TrolleyThreeComponent } from './products/trolleys/trolley-three/trolley-three.component';
+import { BagsComponent } from './products/bags/bags.component';
+import { BagOneComponent } from './products/bags/bag-one/bag-one.component';
+import { BagTwoComponent } from './products/bags/bag-two/bag-two.component';
+import { BagThreeComponent } from './products/bags/bag-three/bag-three.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard/:name', canActivate: [AuthenticationGuard], component: DashboardComponent },
-  // { path: 'dashboard/:name', component: DashboardComponent },
-
   { path: 'signup', component: SignupComponent },
+
+  { path: 'trolleys', component: TrolleysComponent },
+  { path: 'trolleyone', component: TrolleyOneComponent },
+  { path: 'trolleytwo', component: TrolleyTwoComponent },
+  { path: 'trolleythree', component: TrolleyThreeComponent },
+
+  { path: 'bags', component: BagsComponent },
+  { path: 'bagone', component: BagOneComponent },
+  { path: 'bagtwo', component: BagTwoComponent },
+  { path: 'bagthree', component: BagThreeComponent },
+
   { path: 'address', component: AddressComponent },
   { path: 'termsandconditions', component: TermsandconditionsComponent },
   { path: 'privatepolicy', component: PrivatepolicyComponent },

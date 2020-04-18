@@ -21,7 +21,7 @@ export class AuthenticationGuard implements CanActivate {
     // const id2 = next.paramMap.get('id');
     // console.log(id2);
     console.log(name)
-    if (name != null && name != undefined && this.cusomerSvc.userLogin) {
+    if (name != null && name != undefined && this.cusomerSvc.userLoginInfo.userLogin) {
       return true;
     } else {
       this.router.navigateByUrl('/login');
