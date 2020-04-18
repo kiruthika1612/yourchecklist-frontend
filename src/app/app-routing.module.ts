@@ -21,6 +21,10 @@ import { AccessoriesComponent } from './products/accessories/accessories.compone
 import { AccessoryOneComponent } from './products/accessories/accessory-one/accessory-one.component';
 import { AccessoryTwoComponent } from './products/accessories/accessory-two/accessory-two.component';
 import { AccessoryThreeComponent } from './products/accessories/accessory-three/accessory-three.component';
+import { CosmeticsComponent } from './products/cosmetics/cosmetics.component';
+import { CosmeticOneComponent } from './products/cosmetics/cosmetic-one/cosmetic-one.component';
+import { CosmeticTwoComponent } from './products/cosmetics/cosmetic-two/cosmetic-two.component';
+import { CosmeticThreeComponent } from './products/cosmetics/cosmetic-three/cosmetic-three.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -42,6 +46,12 @@ const routes: Routes = [
   { path: 'accessoryone', component: AccessoryOneComponent },
   { path: 'accessorytwo', component: AccessoryTwoComponent },
   { path: 'accessorythree', component: AccessoryThreeComponent },
+
+  { path: 'cosmetics', component: CosmeticsComponent },
+  { path: 'cosmeticone', component: CosmeticOneComponent },
+  { path: 'cosmetictwo', component: CosmeticTwoComponent },
+  { path: 'cosmeticthree', component: CosmeticThreeComponent },
+
 
   { path: 'address', component: AddressComponent },
   { path: 'termsandconditions', component: TermsandconditionsComponent },
