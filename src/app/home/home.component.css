@@ -1,7 +1,7 @@
 .bgimg {
     background-position: center;
     background-size:cover;
-    background-image: url('../images/Home_Background.jpg');
+    background-image: url('../../assets/images/Home_Background.jpg');
     }
 
 body,
