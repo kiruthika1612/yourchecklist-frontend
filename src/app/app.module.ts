@@ -12,6 +12,9 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AddressComponent } from './address/address.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
+import { PrivatepolicyComponent } from './privatepolicy/privatepolicy.component';
+import { ReturnsComponent } from './returns/returns.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     SignupComponent,
     AddressComponent,
-    DashboardComponent
+    DashboardComponent,
+    TermsandconditionsComponent,
+    PrivatepolicyComponent,
+    ReturnsComponent
   ],
   imports: [
     BrowserModule,

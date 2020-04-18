@@ -6,6 +6,9 @@ import { SignupComponent } from './signup/signup.component';
 import { AddressComponent } from './address/address.component';
 import { AuthenticationGuard } from './login/authentication.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TermsandconditionsComponent } from './termsandconditions/termsandconditions.component';
+import { PrivatepolicyComponent } from './privatepolicy/privatepolicy.component';
+import { ReturnsComponent } from './returns/returns.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,6 +18,9 @@ const routes: Routes = [
 
   { path: 'signup', component: SignupComponent },
   { path: 'address', component: AddressComponent },
+  { path: 'termsandconditions', component: TermsandconditionsComponent },
+  { path: 'privatepolicy', component: PrivatepolicyComponent },
+  { path: 'returns', component: ReturnsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 
 ];
