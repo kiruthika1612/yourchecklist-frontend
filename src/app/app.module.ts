@@ -39,6 +39,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { PurchaseSuccessComponent } from './purchase-success/purchase-success.component';
 import { PurchaseFailComponent } from './purchase-fail/purchase-fail.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { LivechatWidgetModule } from '@livechat/angular-widget'
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     ReactiveFormsModule,
     HttpClientModule,
     CarouselModule,
-    ButtonModule
+    ButtonModule,
+    LivechatWidgetModule
 
   ],
   providers: [],
