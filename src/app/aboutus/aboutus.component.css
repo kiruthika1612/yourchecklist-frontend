@@ -1,0 +1,16 @@
+p.heading
+	{
+		font-family: Impact, Charcoal, sans-serif;
+		  font-size: 200%;
+	}
+	.bodyheading
+	{
+	font-family: Book Antiqua;
+		  font-size: 150%;
+	}
+
+	.body
+	{
+	font-family: Book Antiqua;
+		  font-size: 130%;
+	}

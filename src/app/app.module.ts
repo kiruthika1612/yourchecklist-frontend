@@ -38,6 +38,7 @@ import { CosmeticThreeComponent } from './products/cosmetics/cosmetic-three/cosm
 import { PaymentComponent } from './payment/payment.component';
 import { PurchaseSuccessComponent } from './purchase-success/purchase-success.component';
 import { PurchaseFailComponent } from './purchase-fail/purchase-fail.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { PurchaseFailComponent } from './purchase-fail/purchase-fail.component';
     CosmeticThreeComponent,
     PaymentComponent,
     PurchaseSuccessComponent,
-    PurchaseFailComponent
+    PurchaseFailComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,11 @@ input[type=text], input[type=password] {
     opacity: 0.8;
   }
   
-  
+  .bgimg {
+    /* background-position: center; */
+    background-size:cover;
+    background-image: url('../../assets/images/Home_Background.jpg');
+    }
   
   .imgcontainer {
     text-align: center;

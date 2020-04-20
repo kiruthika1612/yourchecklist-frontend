@@ -3,16 +3,20 @@
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
       onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a [routerLink]="['/home']" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SHOP</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
+    <a [routerLink]="['/products']" fragment="products"
+      class="w3-bar-item w3-button w3-padding-large w3-hide-small">SHOP</a>
+    <a [routerLink]="['/aboutus']" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">CONTACT <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Cal Us</a>
-        <a href="#" class="w3-bar-item w3-button">Mail Us</a>
-        <a href="#" class="w3-bar-item w3-button">Feedback</a>
+        <div class="w3-button w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">
+          Call Us</div>
+        <a href="mailto:kiruthika1612@gmail.com" class="w3-bar-item w3-button">Mail Us</a>
+        <a [routerLink]="['/home']" fragment="contact" class="w3-bar-item w3-button w3-padding-large"
+          onclick="myFunction()">Feedback</a>
       </div>
     </div>
+
 
     <button *ngIf='customerSvc.userLoginInfo.userLogin' class=" w3-padding" class="w3-button"
       (click)='takeMeToDashboard()'>DASHBOARD</button>
@@ -27,4 +31,47 @@
       <button class="w3-button w3-red" (click)='toggleLoginState()' [routerLink]="['/home']">Logout</button>
     </div>
   </div>
+  <!-- Button to Open the Modal -->
+  <!-- <button class="w3-button w3-blue w3-margin-bottom"
+    onclick="document.getElementById('ticketModal').style.display='block'">What is COD??</button> -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding">
+        <span onclick="document.getElementById('ticketModal').style.display='none'"
+          class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-phone w3-margin-right"></i>PLEASE CALL US AT</h2>
+      </header>
+      <div class="w3-container">
+        <div class="w3-main">
+          <h3>
+            Support 1: 1800-56789
+          </h3> 
+          <h3>
+            Support 2: 1800-56790
+          </h3>
+          <h3>
+            Support 3: 1800-56791
+          </h3>
+        </div>
+        <button class="w3-button w3-red w3-section"
+          onclick="document.getElementById('ticketModal').style.display='none'">Cancel <i
+            class="fa fa-remove"></i></button>
+      </div>
+    </div>
+  </div>
 </div>
+<!-- <script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+function feedback() {
+
+}
+</script> -->

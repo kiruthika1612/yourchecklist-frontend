@@ -28,9 +28,11 @@ import { CosmeticThreeComponent } from './products/cosmetics/cosmetic-three/cosm
 import { PaymentComponent } from './payment/payment.component';
 import { PurchaseSuccessComponent } from './purchase-success/purchase-success.component';
 import { PurchaseFailComponent } from './purchase-fail/purchase-fail.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  {path:'aboutus', component: AboutusComponent},
   { path: 'login', component: LoginComponent },
   { path: 'dashboard/:name', canActivate: [AuthenticationGuard], component: DashboardComponent },
   { path: 'signup', component: SignupComponent },
