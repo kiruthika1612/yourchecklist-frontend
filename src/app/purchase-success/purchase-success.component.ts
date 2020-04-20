@@ -10,64 +10,29 @@ import { Customer } from '../model/customer';
   styleUrls: ['./purchase-success.component.css']
 })
 export class PurchaseSuccessComponent implements OnInit {
-  formdata: FormGroup;
-  customer = new Customer();
-  accountState: boolean;
-  accountFailState: boolean;
-  wrongPassword: boolean
-
+  address: string = "";
   constructor(private custSvc: CustomerService, private router: Router) { }
 
   ngOnInit() {
-    this.formdata = new FormGroup({
-      pemail:
-        new FormControl("", Validators.compose([
-          Validators.required,
-          Validators.pattern("[^ @]*@[^ @]*")
-        ])),
-        fname: new FormControl("", Validators.compose([
-        Validators.required,
-      ])),
-      address: new FormControl("", Validators.compose([
-        Validators.required
-      ])),
-      pcity: new FormControl("", Validators.compose([
-        Validators.required,
-      ])),
-      pstate: new FormControl("", Validators.compose([
-        Validators.required,
-      ])),
-      ppostalcode: new FormControl("", Validators.compose([
-        Validators.required,
-      ])),
-      nameoncard: new FormControl("", Validators.compose([
-        Validators.required,
-      ])),
-      cccardno: new FormControl("", Validators.compose([
-        Validators.required,
-      ])),
-      expmonth: new FormControl("", Validators.compose([
-        Validators.required,
-      ])),
-      expyear: new FormControl("", Validators.compose([
-        Validators.required,
-      ])),
-      cvv: new FormControl("", Validators.compose([
-        Validators.required,
-         
-      ]))
-    });
+    var userData = "";
+    this.custSvc.getUserData().subscribe({
+      next: data => {
+        userData = data.Complement + " , " + data.Streetno + " , " + data.Streetname + " , " + data.City + " , " + data.Province + " , " + data.Postalcode + " , " + data.Country;
+        this.address = userData;
+      }
+    })
+
   }
 
 
 
-navigateToDashboard() {
-  var userName = this.custSvc.userLoginInfo.cName;
-  if (userName != null)
-    this.router.navigateByUrl('/dashboard/' + userName)
-  else {
-    this.router.navigateByUrl('/login')
+  navigateToDashboard() {
+    var userName = this.custSvc.userLoginInfo.cName;
+    if (userName != null)
+      this.router.navigateByUrl('/dashboard/' + userName)
+    else {
+      this.router.navigateByUrl('/login')
+    }
   }
-}
 }
 

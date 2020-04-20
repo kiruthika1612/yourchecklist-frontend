@@ -60,6 +60,12 @@ export class CustomerService {
 
   }
 
+  getUserData():Observable<any> {
+    return this.http.get<any>('http://localhost:3000/getUserDetails/'+this.userLoginInfo.cid).pipe(
+      catchError(this.handleError)
+    );
+
+  }
 
   private handleError(err: HttpErrorResponse) {
     // in a real world app, we may send the server to some remote logging infrastructure
