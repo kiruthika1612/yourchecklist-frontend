@@ -12,7 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-
+  paydata: FormGroup;
   formdata: FormGroup;
   loginState: boolean;
   customer = new Customer();
@@ -23,6 +23,7 @@ export class PaymentComponent implements OnInit {
   ngOnInit() {
 
     this.formdata = new FormGroup({
+
       email:
         new FormControl("", Validators.compose([
           Validators.required,
@@ -30,6 +31,44 @@ export class PaymentComponent implements OnInit {
         ])),
       password: new FormControl("", Validators.compose([
         Validators.required
+      ]))
+    })
+    this.paydata = new FormGroup({
+      pemail:
+        new FormControl("", Validators.compose([
+          Validators.required,
+          Validators.pattern("[^ @]*@[^ @]*")
+        ])),
+      fname: new FormControl("", Validators.compose([
+        Validators.required,
+      ])),
+      address: new FormControl("", Validators.compose([
+        Validators.required
+      ])),
+      pcity: new FormControl("", Validators.compose([
+        Validators.required,
+      ])),
+      pstate: new FormControl("", Validators.compose([
+        Validators.required,
+      ])),
+      ppostalcode: new FormControl("", Validators.compose([
+        Validators.required,
+      ])),
+      nameoncard: new FormControl("", Validators.compose([
+        Validators.required,
+      ])),
+      cccardno: new FormControl("", Validators.compose([
+        Validators.required,
+      ])),
+      expmonth: new FormControl("", Validators.compose([
+        Validators.required,
+      ])),
+      expyear: new FormControl("", Validators.compose([
+        Validators.required,
+      ])),
+      cvv: new FormControl("", Validators.compose([
+        Validators.required,
+
       ]))
     })
   }
@@ -65,7 +104,7 @@ export class PaymentComponent implements OnInit {
           console.log(data);
           if (data.statusCode == 200) {
             this.router.navigateByUrl('/purchase-success')
-          }else{
+          } else {
             this.router.navigateByUrl('/purchase-fail')
           }
         }

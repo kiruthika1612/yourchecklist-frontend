@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
   customer = new Customer();
   accountState: boolean;
   accountFailState: boolean;
-  wrongPassword: boolean
+  wrongPassword: boolean 
 
   constructor(private customerSvc: CustomerService) { }
 
