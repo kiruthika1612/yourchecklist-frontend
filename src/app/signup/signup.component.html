@@ -344,11 +344,11 @@
           <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
         </label>
 
-        <p>By creating an account you agree to our <a href="termsandconditions.html" style="color:dodgerblue">Terms &
+        <p>By creating an account you agree to our <a [routerLink]="['/termsandconditions']" style="color:dodgerblue">Terms &
             conditions</a>.</p>
 
         <div class="clearfix">
-          <button type="button" class="cancelbtn"><a href="home.html">Cancel</a></button>
+          <button type="button" class="cancelbtn" [routerLink]="['/home']">Cancel</button>
           <button type="submit" class="signupbtn" [disabled]="!formdata.valid"> Create
               Your Account</button>
         </div>
