@@ -3,8 +3,7 @@
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
       onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a [routerLink]="['/home']" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a [routerLink]="['/products']" fragment="products"
-      class="w3-bar-item w3-button w3-padding-large w3-hide-small">SHOP</a>
+    <a href="/home#products" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SHOP</a>
     <a [routerLink]="['/aboutus']" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">CONTACT <i class="fa fa-caret-down"></i></button>
@@ -12,8 +11,7 @@
         <div class="w3-button w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">
           Call Us</div>
         <a href="mailto:kiruthika1612@gmail.com" class="w3-bar-item w3-button">Mail Us</a>
-        <a [routerLink]="['/home']" fragment="contact" class="w3-bar-item w3-button w3-padding-large"
-          onclick="myFunction()">Feedback</a>
+        <a href="/home#feedback" class="w3-bar-item w3-button w3-padding-large">Feedback</a>
       </div>
     </div>
 
@@ -45,7 +43,7 @@
         <div class="w3-main">
           <h3>
             Support 1: 1800-56789
-          </h3> 
+          </h3>
           <h3>
             Support 2: 1800-56790
           </h3>
