@@ -39,7 +39,8 @@ import { PaymentComponent } from './payment/payment.component';
 import { PurchaseSuccessComponent } from './purchase-success/purchase-success.component';
 import { PurchaseFailComponent } from './purchase-fail/purchase-fail.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { LivechatWidgetModule } from '@livechat/angular-widget'
+import { LivechatWidgetModule } from '@livechat/angular-widget';
+import { PasswordresetComponent } from './passwordreset/passwordreset.component'
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { LivechatWidgetModule } from '@livechat/angular-widget'
     PaymentComponent,
     PurchaseSuccessComponent,
     PurchaseFailComponent,
-    AboutusComponent
+    AboutusComponent,
+    PasswordresetComponent
   ],
   imports: [
     BrowserModule,
