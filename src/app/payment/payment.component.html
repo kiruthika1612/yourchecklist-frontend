@@ -1,6 +1,6 @@
 <h2 style="color:black;"> Checkout Page </h2>
 <p style="color:black;">&nbsp;
-  Please enter the details </p>
+  Please enter all the required details </p>
 <div class="row">
   <div class="col-75">
     <div class="container">
@@ -97,16 +97,16 @@
 
       <!-- Button to Open the Modal -->
       <button class="w3-button w3-blue w3-margin-bottom"
-        onclick="document.getElementById('ticketModal').style.display='block'">What is COD??</button>
+        onclick="document.getElementById('ticketModal1').style.display='block'">What is COD??</button>
 
     </div>
   </div>
 </div>
 <!-- COD Popup-->
-<div id="ticketModal" class="w3-modal">
+<div id="ticketModal1" class="w3-modal">
   <div class="w3-modal-content w3-animate-top w3-card-4">
     <header class="w3-container w3-teal w3-center w3-padding">
-      <span onclick="document.getElementById('ticketModal').style.display='none'"
+      <span onclick="document.getElementById('ticketModal1').style.display='none'"
         class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
       <h2 class="w3-wide"><i class="fa fa-money w3-margin-right"></i>Cash On Delivery</h2>
     </header>
@@ -118,7 +118,7 @@
         </h3>
       </div>
       <button class="w3-button w3-red w3-section"
-        onclick="document.getElementById('ticketModal').style.display='none'">Cancel <i
+        onclick="document.getElementById('ticketModal1').style.display='none'">Cancel <i
           class="fa fa-remove"></i></button>
     </div>
   </div>
@@ -174,7 +174,7 @@
 </div>
 <script>
   // When the user clicks anywhere outside of the modal, close it
-  var modal = document.getElementById('ticketModal');
+  var modal = document.getElementById('ticketModal1');
   window.onclick = function (event) {
     if (event.target == modal) {
       modal.style.display = "none";
