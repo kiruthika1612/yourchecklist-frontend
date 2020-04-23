@@ -1,3 +1,4 @@
+<!-- Header for our website -->
 <div class="bgimg w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-top w3-center cookware">
         <span class="w3-text-black ">Your Checklist</span>
@@ -16,7 +17,7 @@
     <h2>Cash On Delivery!!!</h2>
     <p>Wanna pay only after seeing the product? Check out our exclusive payment option</p>
 
-    <!-- Button to Open the Modal -->
+    <!-- Button to Open the Modal (ticketModal1)-->
     <button class="w3-button w3-blue w3-margin-bottom"
         onclick="document.getElementById('ticketModal1').style.display='block'">What is COD??</button>
     <br />
@@ -29,12 +30,12 @@
         onclick="document.getElementById('easyRefundMoal').style.display='block'"> Wanna get money back???</button>
 
 
-    <!-- The Modal -->
+
 
 </div>
-<div class="w3-container"> 
+<div class="w3-container">
     <div class="w3-half w3-black w3-text-white">
-        <!-- Contact -->
+        <!-- Adding Feedback -->
         <div class="w3-container" id="feedback">
             <h2>Your Feedback is important to us</h2>
             <p>Questions? Go ahead, ask them:</p>
@@ -45,6 +46,7 @@
                         placeholder="Email" required name="Email"></p>
                 <p><input formControlName="message" class="w3-round-xlarge w3-input w3-border custom-input" type="text"
                         placeholder="Message" required name="Message"></p>
+                <!-- validating feedback form -->
                 <button type="submit" class="w3-round-xlarge w3-button w3-green w3-third"
                     [disabled]="!formdata.valid">Send
                     a Message</button>
@@ -52,6 +54,7 @@
         </div>
         <br>
     </div>
+    <!-- Information on rental policies -->
     <div id="aboutus" class="w3-half w3-grey ">
         <div class="w3-card w3-margin">
             <div class="w3-container w3-padding w3-light-grey">
