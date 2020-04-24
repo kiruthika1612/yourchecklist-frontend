@@ -2,6 +2,7 @@
   <div class="w3-center">
     <h2>MY PRODUCTS</h2>
   </div>
+  <!-- adding purchased products to the dashboard -->
   <div *ngIf='myProducts?.length != 0' class="w3-row">
     <div class="w3-col" style="width:500px;" *ngFor='let product of myProducts'>
       <div class="w3-container">
@@ -12,6 +13,7 @@
       </div>
     </div>
   </div>
+  <!-- Display message when user did not oreder anything -->
   <div *ngIf='myProducts == undefined || myProducts?.length == 0'>
     <h3 style="opacity: 0.4"> <i>You are yet to make your first purchase</i> </h3>
   </div>

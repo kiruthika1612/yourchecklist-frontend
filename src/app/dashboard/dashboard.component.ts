@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.getMyProducts();
   }
-
+  // getting products using user login information
   getMyProducts() {
     var data = {
       cid: this.custSvc.userLoginInfo.cid
