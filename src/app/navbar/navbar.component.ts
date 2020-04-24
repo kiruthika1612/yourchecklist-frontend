@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
 
 
   constructor(private customerSvc: CustomerService, private router: Router) { }
-
+  // updating the navigation bar based on login status
   ngOnInit() {
 
   }
