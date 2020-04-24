@@ -4,6 +4,7 @@
 <div class="row">
   <div class="col-75">
     <div class="container">
+      <!-- validating data in checkout form -->
       <form [formGroup]="paydata" (ngSubmit)="onClickSubmit(paydata.value)" action="continuetocheckout.html">
 
         <div class="row">
@@ -11,25 +12,27 @@
             <h3>Billing Address</h3>
             <label><i class="fa fa-user"></i> Full Name</label>
             <input type="text" formControlName="fname" placeholder="Enter your name" required>
-            <label ><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" formControlName="pemail"placeholder="Enter your mail ID"required>
+            <label><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" formControlName="pemail" placeholder="Enter your mail ID" required>
             <label for="adr"><i class="fa fa-address-card-o"></i> Address </label>
-            <input type="text" formControlName="address" id="adr" name="address" placeholder="Enter your address"required>
+            <input type="text" formControlName="address" id="adr" name="address" placeholder="Enter your address"
+              required>
             <label for="city"><i class="fa fa-institution"></i> City</label>
-            <input type="text" formControlName="pcity"id="city" name="city" placeholder="Enter your city"required>
+            <input type="text" formControlName="pcity" id="city" name="city" placeholder="Enter your city" required>
 
             <div class="row">
               <div class="col-50">
                 <label for="state">State</label>
-                <input type="text" formControlName="pstate"id="state" name="state" placeholder="Enter your state"required>
+                <input type="text" formControlName="pstate" id="state" name="state" placeholder="Enter your state"
+                  required>
               </div>
               <div class="col-50">
                 <label for="zip">Postal Code</label>
-                <input type="text" formControlName="ppostalcode" id="zip" name="zip" placeholder="Postal Code"required>
+                <input type="text" formControlName="ppostalcode" id="zip" name="zip" placeholder="Postal Code" required>
               </div>
             </div>
           </div>
-
+          <!-- payment form -->
           <div class="col-50">
             <h3>Payment</h3>
             <label for="fname">Accepted Cards</label>
@@ -40,19 +43,21 @@
               <i class="fa fa-cc-discover" style="color:orange;"></i>
             </div>
             <label for="cname">Name on Card</label>
-            <input type="text" formControlName="nameoncard" id="cname" name="cardname" placeholder="Enter the name on the card"required>
+            <input type="text" formControlName="nameoncard" id="cname" name="cardname"
+              placeholder="Enter the name on the card" required>
             <label for="ccnum">Credit card number</label>
-            <input type="text" formControlName="cccardno"id="ccnum" name="cardnumber" placeholder="xxxx-xxxx-xxxx-xxxx"required>
+            <input type="text" formControlName="cccardno" id="ccnum" name="cardnumber" placeholder="xxxx-xxxx-xxxx-xxxx"
+              required>
             <label for="expmonth">Exp Month</label>
-            <input type="text" formControlName="expmonth"id="expmonth" name="expmonth" placeholder="xx"required>
+            <input type="text" formControlName="expmonth" id="expmonth" name="expmonth" placeholder="xx" required>
             <div class="row">
               <div class="col-50">
                 <label for="expyear">Exp Year</label>
-                <input type="text" formControlName="expyear"id="expyear" name="expyear" placeholder="xxxx"required>
+                <input type="text" formControlName="expyear" id="expyear" name="expyear" placeholder="xxxx" required>
               </div>
               <div class="col-50">
                 <label for="cvv">CVV</label>
-                <input type="text" formControlName="cvv" id="cvv" name="cvv" placeholder="xxx"required>
+                <input type="text" formControlName="cvv" id="cvv" name="cvv" placeholder="xxx" required>
               </div>
             </div>
           </div>
@@ -64,9 +69,11 @@
         <div *ngIf='this.customerservice.userLoginInfo.userLogin'>
           <input type="submit" (click)='buy()' value="Continue to checkout" class="btn">
         </div>
+        <!-- check login status of the user for enablong the button -->
         <div *ngIf='!this.customerservice.userLoginInfo.userLogin'>
-          <input type="submit" [disabled]="!paydata.valid" onclick="document.getElementById('loginModal').style.display='block'"
-            value="Please Login to Check Out" class="btn">
+          <input type="submit" [disabled]="!paydata.valid"
+            onclick="document.getElementById('loginModal').style.display='block'" value="Please Login to Check Out"
+            class="btn">
         </div>
 
       </form>
@@ -144,7 +151,7 @@
 
             <label><b>Password</b></label>
             <input formControlName="password" type="password" placeholder="Password" required>
-
+            <!-- display buy button once user on successful log in   -->
             <div *ngIf='!showBuy'>
               <button class="w3-button w3-red w3-section"
                 onclick="document.getElementById('loginModal').style.display='none'">Cancel</button> &nbsp;&nbsp;&nbsp;
@@ -156,6 +163,7 @@
             </div>
 
           </div>
+          <!-- validating mail id and respective password from database -->
           <div *ngIf='loginState' class="w3-container">
             <div class="w3-center">
               <h1 class="w3-red"> Email id or password is incorrect!</h1>
