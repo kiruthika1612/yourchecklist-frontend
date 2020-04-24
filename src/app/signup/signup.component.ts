@@ -14,12 +14,12 @@ export class SignupComponent implements OnInit {
   customer = new Customer();
   accountState: boolean;
   accountFailState: boolean;
-  wrongPassword: boolean 
+  wrongPassword: boolean
 
   constructor(private customerSvc: CustomerService) { }
 
   ngOnInit() {
-
+    // validating the data in the signup form
     this.formdata = new FormGroup({
       email:
         new FormControl("", Validators.compose([
@@ -71,7 +71,7 @@ export class SignupComponent implements OnInit {
     this.accountState = false;
     this.accountFailState = false;
 
-    
+
     this.customer.firstName = data.firstName;
     this.customer.lastName = data.lastName;
     this.customer.email = data.email;
@@ -84,7 +84,7 @@ export class SignupComponent implements OnInit {
     this.customer.province = data.province;
     this.customer.country = data.country;
     this.customer.postalCode = data.postalCode;
-
+    // matching password and repeat password fields
     if (data.password == data.repassword) {
 
       console.log(this.customer)
