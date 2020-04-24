@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.formdata = new FormGroup({
+      // validating email address
       email:
         new FormControl("", Validators.compose([
           Validators.required,
@@ -28,20 +29,20 @@ export class LoginComponent implements OnInit {
     })
   }
   onClickSubmit(data) {
-    this.loginState=false;
+    this.loginState = false;
     this.customer.email = data.email;
     this.customer.password = data.password;
     console.log(this.customer);
+    // navigating to dashboard on successful login
     this.customerservice.auth(this.customer).subscribe({
       next: data => {
         // console.log(data);
         if (data.status) {
-          this.router.navigateByUrl('/dashboard/'+data.customerName);
+          this.router.navigateByUrl('/dashboard/' + data.customerName);
         }
-        else
-        {
-          this.loginState=true;
-          
+        else {
+          this.loginState = true;
+
         }
       }
     });
